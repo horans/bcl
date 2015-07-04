@@ -1,5 +1,4 @@
-## bootstrap customize localization
-*user script*
+## bootstrap customize localization *[user script]*
 
 #### intro
 a localization tool for bootstrap customize page, also serve as a note for people not familiar with css. simple chinese translation is currently provided.
@@ -11,7 +10,7 @@ a localization tool for bootstrap customize page, also serve as a note for peopl
 * http://v3.bootcss.com/customize/
 
 #### install
-*user script extension installed for browser. (ie. tampermonkey for chrome, greasemonkey for firefox)*
+*user script extension installed for browser. (tampermonkey for chrome, greasemonkey for firefox, etc.)*
 
 you can either:
 * a. copy and paste online *bcl.js*
