@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         bootstrap customize localization
 // @namespace    http://horan.cc/
-// @version      0.1
+// @version      0.1a
 // @description  a localization tool for bootstrap customize page, also serve as a note for people not familiar with css. simple chinese translation is currently provided.
 // @author       horan
 // @match        http://getbootstrap.com/customize/
 // @match        http://v3.bootcss.com/customize/
 // @require      //cdn.bootcss.com/jquery/1.11.3/jquery.min.js
 // @grant none
-// @changelog    translation for "less variables"
+// @changelog    translation revised; change localization postion to avoid compile problem.
 // ==/UserScript==
 $(document).ready(function() {
 	'use strict';
@@ -19,21 +19,21 @@ $(document).ready(function() {
 			$('#' + e.toLowerCase().replace(' ', '-')).append(' <small>' + s + '</small>');
 		//input, deprecated
 		} else if(t === 3){
-			$('*[id="input-@' + e + '"]').prev().append('<br><del><small>' + s + '</small></del>');
+			$('*[id="input-@' + e + '"]').after('<p class="help-block"><del>' + s + '</del></p>');
 		//input, default
 		} else {
-			$('*[id="input-@' + e + '"]').prev().append('<br><small>' + s + '</small>');
+			$('*[id="input-@' + e + '"]').after('<p class="help-block">' + s + '</p>');
         }
     }
 	
 	//colors
     l('colors', '颜色', 2);
-    l('gray-base', '灰色 标准');
-    l('gray-darker', '灰色 更深');
-    l('gray-dark', '灰色 深');
-    l('gray', '灰色');
-    l('gray-light', '灰色 浅');
-    l('gray-lighter', '灰色 更浅');
+    l('gray-base', '灰度 标准');
+    l('gray-darker', '灰度 更深');
+    l('gray-dark', '灰度 深');
+    l('gray', '灰度');
+    l('gray-light', '灰度 浅');
+    l('gray-lighter', '灰度 更浅');
     l('brand-primary', '品牌色 主要');
     l('brand-success', '品牌色 成功');
     l('brand-info', '品牌色 提示');
@@ -203,48 +203,48 @@ $(document).ready(function() {
 	l('container-lg', '大容器');
 	
 	//navbar
-	l('navbar', '导航栏', 2);
-	l('navbar-height', '导航栏 高度');
-	l('navbar-margin-bottom', '导航栏 底部 外边据');
-	l('navbar-border-radius', '导航栏 边框弧度');
-	l('navbar-padding-horizontal', '导航栏 水平 内边距');
-	l('navbar-padding-vertical', '导航栏 垂直 内边距');
-	l('navbar-collapse-max-height', '导航栏 折叠 最大高度');
-	l('navbar-default-color', '导航栏 文字颜色');
-	l('navbar-default-bg', '导航栏 背景颜色');
-	l('navbar-default-border', '导航栏 边框颜色');
-	l('navbar-default-link-color', '导航栏 链接 颜色');
-	l('navbar-default-link-hover-color', '导航栏 悬停链接 文字颜色');
-	l('navbar-default-link-hover-bg', '导航栏 悬停链接 背景颜色');
-	l('navbar-default-link-active-color', '导航栏 当前链接 文字颜色');
-	l('navbar-default-link-active-bg', '导航栏 当前链接 背景颜色');
-	l('navbar-default-link-disabled-color', '导航栏 禁用链接 文字颜色');
-	l('navbar-default-link-disabled-bg', '导航栏 禁用链接 背景颜色');
-	l('navbar-default-brand-color', '导航栏 标志 文字颜色');
-	l('navbar-default-brand-hover-color', '导航栏 标志 悬停 文字颜色');
-	l('navbar-default-brand-hover-bg', '导航栏 标志 悬停 背景颜色');
-	l('navbar-default-toggle-hover-bg', '导航栏 切换 悬停 背景颜色');
-	l('navbar-default-toggle-icon-bar-bg', '导航栏 切换 图标栏 背景颜色');
-	l('navbar-default-toggle-border-color', '导航栏 切换 边框颜色');
+	l('navbar', '导航条', 2);
+	l('navbar-height', '导航条 高度');
+	l('navbar-margin-bottom', '导航条 底部 外边据');
+	l('navbar-border-radius', '导航条 边框弧度');
+	l('navbar-padding-horizontal', '导航条 水平 内边距');
+	l('navbar-padding-vertical', '导航条 垂直 内边距');
+	l('navbar-collapse-max-height', '导航条 折叠 最大高度');
+	l('navbar-default-color', '导航条 文字颜色');
+	l('navbar-default-bg', '导航条 背景颜色');
+	l('navbar-default-border', '导航条 边框颜色');
+	l('navbar-default-link-color', '导航条 链接 颜色');
+	l('navbar-default-link-hover-color', '导航条 悬停链接 文字颜色');
+	l('navbar-default-link-hover-bg', '导航条 悬停链接 背景颜色');
+	l('navbar-default-link-active-color', '导航条 当前链接 文字颜色');
+	l('navbar-default-link-active-bg', '导航条 当前链接 背景颜色');
+	l('navbar-default-link-disabled-color', '导航条 禁用链接 文字颜色');
+	l('navbar-default-link-disabled-bg', '导航条 禁用链接 背景颜色');
+	l('navbar-default-brand-color', '导航条 标志 文字颜色');
+	l('navbar-default-brand-hover-color', '导航条 标志 悬停 文字颜色');
+	l('navbar-default-brand-hover-bg', '导航条 标志 悬停 背景颜色');
+	l('navbar-default-toggle-hover-bg', '导航条 切换 悬停 背景颜色');
+	l('navbar-default-toggle-icon-bar-bg', '导航条 切换 图标栏 背景颜色');
+	l('navbar-default-toggle-border-color', '导航条 切换 边框颜色');
 	
 	//inverted navbar
-	l('inverted-navbar', '反色导航栏', 2);
-	l('navbar-inverse-color', '反色导航栏 文字颜色');
-	l('navbar-inverse-bg', '反色导航栏 背景颜色');
-	l('navbar-inverse-border', '反色导航栏 边框颜色');
-	l('navbar-inverse-link-color', '反色导航栏 链接 颜色');
-	l('navbar-inverse-link-hover-color', '反色导航栏 悬停链接 文字颜色');
-	l('navbar-inverse-link-hover-bg', '反色导航栏 悬停链接 背景颜色');
-	l('navbar-inverse-link-active-color', '反色导航栏 当前链接 文字颜色');
-	l('navbar-inverse-link-active-bg', '反色导航栏 当前链接 背景颜色');
-	l('navbar-inverse-link-disabled-color', '反色导航栏 禁用链接 文字颜色');
-	l('navbar-inverse-link-disabled-bg', '反色导航栏 禁用链接 背景颜色');
-	l('navbar-inverse-brand-color', '反色导航栏 标志 文字颜色');
-	l('navbar-inverse-brand-hover-color', '反色导航栏 标志 悬停 文字颜色');
-	l('navbar-inverse-brand-hover-bg', '反色导航栏 标志 悬停 背景颜色');
-	l('navbar-inverse-toggle-hover-bg', '反色导航栏 切换 悬停 背景颜色');
-	l('navbar-inverse-toggle-icon-bar-bg', '反色导航栏 切换 图标栏 背景颜色');
-	l('navbar-inverse-toggle-border-color', '反色导航栏 切换 边框颜色');
+	l('inverted-navbar', '反色导航条', 2);
+	l('navbar-inverse-color', '反色导航条 文字颜色');
+	l('navbar-inverse-bg', '反色导航条 背景颜色');
+	l('navbar-inverse-border', '反色导航条 边框颜色');
+	l('navbar-inverse-link-color', '反色导航条 链接 颜色');
+	l('navbar-inverse-link-hover-color', '反色导航条 悬停链接 文字颜色');
+	l('navbar-inverse-link-hover-bg', '反色导航条 悬停链接 背景颜色');
+	l('navbar-inverse-link-active-color', '反色导航条 当前链接 文字颜色');
+	l('navbar-inverse-link-active-bg', '反色导航条 当前链接 背景颜色');
+	l('navbar-inverse-link-disabled-color', '反色导航条 禁用链接 文字颜色');
+	l('navbar-inverse-link-disabled-bg', '反色导航条 禁用链接 背景颜色');
+	l('navbar-inverse-brand-color', '反色导航条 标志 文字颜色');
+	l('navbar-inverse-brand-hover-color', '反色导航条 标志 悬停 文字颜色');
+	l('navbar-inverse-brand-hover-bg', '反色导航条 标志 悬停 背景颜色');
+	l('navbar-inverse-toggle-hover-bg', '反色导航条 切换 悬停 背景颜色');
+	l('navbar-inverse-toggle-icon-bar-bg', '反色导航条 切换 图标栏 背景颜色');
+	l('navbar-inverse-toggle-border-color', '反色导航条 切换 边框颜色');
 	
 	//navs
 	l('navs', '导航', 2);
