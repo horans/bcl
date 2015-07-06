@@ -18,5 +18,9 @@ you can either:
 * c. import from *https://raw.githubusercontent.com/horans/bcl/master/bcl.js*
 
 ### changelog
+*v0.1a*
+* translation revised
+* change localization position to avoid compile problem
+
 *v0.1*
 * translation for "less variables"
