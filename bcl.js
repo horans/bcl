@@ -4,8 +4,8 @@
 // @version      0.1a
 // @description  a localization tool for bootstrap customize page, also serve as a note for people not familiar with css. simple chinese translation is currently provided.
 // @author       horan
-// @match        http://getbootstrap.com/customize/
-// @match        http://v3.bootcss.com/customize/
+// @match        http://getbootstrap.com/customize/*
+// @match        http://v3.bootcss.com/customize/*
 // @require      //cdn.bootcss.com/jquery/1.11.3/jquery.min.js
 // @grant none
 // @changelog    translation revised; change localization postion to avoid compile problem.
